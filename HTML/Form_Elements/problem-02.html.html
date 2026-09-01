@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Appointment Booking</title>
+</head>
+<body>
+
+<h1>City Care Clinic</h1>
+<h2>Appointment Booking Form</h2>
+
+<p>
+Use this form to request an appointment with one of our doctors.
+Please provide accurate information.
+</p>
+
+<form action="#" method="post">
+
+<h3>Patient Information</h3>
+
+<label for="name">Patient Name:</label>
+<input type="text" id="name" name="patient_name"
+       minlength="3" maxlength="50" required>
+<br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email"
+       placeholder="patient@example.com" required>
+<br><br>
+
+<label for="mobile">Mobile Number:</label>
+<input type="tel" id="mobile" name="mobile"
+       pattern="[0-9]{10}" placeholder="10 digit number" required>
+<br><br>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="date_of_birth" required>
+
+<hr>
+
+<h3>Appointment Details</h3>
+
+<label for="date">Appointment Date:</label>
+<input type="date" id="date" name="appointment_date"
+       min="2026-09-01" max="2026-12-31" required>
+<br><br>
+
+<label for="time">Appointment Time:</label>
+<input type="time" id="time" name="appointment_time" required>
+<br><br>
+
+<label for="doctor">Select Doctor:</label>
+<select id="doctor" name="doctor" required>
+    <option value="">Choose Doctor</option>
+    <option value="arjun-mehta">Dr. Arjun Mehta - Cardiology</option>
+    <option value="neha-sharma">Dr. Neha Sharma - Dermatology</option>
+    <option value="rahul-verma">Dr. Rahul Verma - Orthopedics</option>
+    <option value="priya-singh">Dr. Priya Singh - Pediatrics</option>
+    <option value="amit-gupta">Dr. Amit Gupta - General Medicine</option>
+</select>
+
+<br><br>
+
+<label>Visit Type:</label><br>
+<input type="radio" id="new" name="visit_type" value="New Patient" required>
+<label for="new">New Patient</label>
+
+<input type="radio" id="follow" name="visit_type" value="Follow-up">
+<label for="follow">Follow-up</label>
+
+<input type="radio" id="consult" name="visit_type" value="Consultation">
+<label for="consult">Consultation</label>
+
+<input type="radio" id="emergency" name="visit_type" value="Emergency">
+<label for="emergency">Emergency</label>
+
+<br><br>
+
+<label>Preferred Communication:</label><br>
+<input type="radio" id="phone" name="communication" value="Phone" required>
+<label for="phone">Phone</label>
+
+<input type="radio" id="mail" name="communication" value="Email">
+<label for="mail">Email</label>
+
+<br><br>
+
+<label for="reason">Reason for Visit:</label><br>
+<textarea id="reason" name="visit_reason"
+          rows="5" cols="50"
+          minlength="5" maxlength="300"
+          placeholder="Describe your reason for visit"
+          required></textarea>
+
+<br><br>
+
+<label for="patientid">Patient ID (Optional):</label>
+<input type="text" id="patientid" name="patient_id"
+       maxlength="20" placeholder="If available">
+
+<br><br>
+
+<input type="checkbox" id="terms" name="appointment_terms"
+       value="accepted" required>
+<label for="terms">I accept the appointment terms.</label>
+
+<br><br>
+
+<input type="submit" value="Book Appointment">
+<input type="reset" value="Reset">
+
+</form>
+
+<hr>
+
+<h3>Clinic Timings</h3>
+
+<table border="1">
+    <tr>
+        <th>Day</th>
+        <th>Opening</th>
+        <th>Closing</th>
+    </tr>
+    <tr>
+        <td>Monday-Friday</td>
+        <td>9:00 AM</td>
+        <td>6:00 PM</td>
+    </tr>
+    <tr>
+        <td>Saturday</td>
+        <td>9:00 AM</td>
+        <td>2:00 PM</td>
+    </tr>
+</table>
+
+<p>
+<a href="tel:+911234567890">Clinic Contact</a>
+</p>
+
+<p>
+<a href="tel:112">Emergency Help</a>
+</p>
+
+</body>
+</html>
+
